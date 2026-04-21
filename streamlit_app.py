@@ -76,7 +76,7 @@ with col2:
     st.subheader("Resultado")
 
     if predecir:
-        bmi = peso / ((altura / 100) ** 2)
+        imc = peso / ((altura / 100) ** 2)
         datos = pd.DataFrame({
             "age": [edad],
             "gender": [genero],
