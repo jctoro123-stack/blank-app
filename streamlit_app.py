@@ -92,6 +92,9 @@ with col2:
             "imc": [imc]
 })
 
+st.write("Columnas del formulario:", list(datos.columns))
+st.write("Columnas esperadas por el scaler:", list(scaler.feature_names_in_))
+
 datos_scaled = scaler.transform(datos)
 
 prob = modelo.predict_proba(datos_scaled)[0][1]
