@@ -150,7 +150,7 @@ with col2:
             unsafe_allow_html=True
         )
 
-        st.metric("Probabilidad estimada", f"{riesgo}%")
+        st.metric("Probabilidad estimada", f"{riesgo:.2f}%")
         st.progress(int(riesgo))
 
         # Mostrar IMC
