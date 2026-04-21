@@ -92,9 +92,9 @@ with col1:
         }[x]
     )
 
-    fuma = st.selectbox("Fumador", [0, 1], format_func=lambda x: "Sí" if x == 1 else "No")
-    alcohol = st.selectbox("Consume Alcohol", [0, 1], format_func=lambda x: "Sí" if x == 1 else "No")
-    actividad = st.selectbox("Actividad Física", [0, 1], format_func=lambda x: "Sí" if x == 1 else "No")
+    fuma = st.selectbox("Fumador", [0, 1], format_func=lambda x: "No" if x == 1 else "Sí")
+    alcohol = st.selectbox("Consume Alcohol", [0, 1], format_func=lambda x: "No" if x == 1 else "Sí")
+    actividad = st.selectbox("Actividad Física", [0, 1], format_func=lambda x: "No" if x == 1 else "Sí")
 
     predecir = st.button("🔍 Predecir Riesgo", use_container_width=True)
 
