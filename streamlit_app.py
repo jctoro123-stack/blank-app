@@ -97,18 +97,18 @@ datos = datos[scaler.feature_names_in_]
 
 datos_scaled = scaler.transform(datos)
 
-        prob = modelo.predict_proba(datos_scaled)[0][1]
-        riesgo = round(prob * 100, 2)
+prob = modelo.predict_proba(datos_scaled)[0][1]
+riesgo = round(prob * 100, 2)
 
-        if riesgo >= 70:
-            color = "#dc2626"
+if riesgo >= 70:
+    color = "#dc2626"
             texto = "ALTO RIESGO"
-        elif riesgo >= 40:
-            color = "#eab308"
-            texto = "RIESGO MODERADO"
-        else:
-            color = "#16a34a"
-            texto = "BAJO RIESGO"
+elif riesgo >= 40:
+    color = "#eab308"
+    texto = "RIESGO MODERADO"
+else:
+    color = "#16a34a"
+    texto = "BAJO RIESGO"
 
         st.markdown(
             f"""
