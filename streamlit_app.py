@@ -123,9 +123,9 @@ with left_col:
             3: "Muy alto"
         }[x]
     )
-        alcohol = st.selectbox("Consume Alcohol", [0, 1], format_func=lambda x: "Sí" if x == 1 else "No")
+        alcohol = st.selectbox("Consume Alcohol", [0, 1], format_func=lambda x: "No" if x == 1 else "Sí")
 
-    actividad = st.selectbox("Actividad física", [0, 1], format_func=lambda x: "Sí" if x == 1 else "No")
+    actividad = st.selectbox("Actividad física", [0, 1],format_func=lambda x: "No" if x == 1 else "Sí")
 
     predecir = st.button("🔍 Analizar Riesgo", use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
