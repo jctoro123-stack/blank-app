@@ -102,7 +102,7 @@ riesgo = round(prob * 100, 2)
 
 if riesgo >= 70:
     color = "#dc2626"
-            texto = "ALTO RIESGO"
+    texto = "ALTO RIESGO"
 elif riesgo >= 40:
     color = "#eab308"
     texto = "RIESGO MODERADO"
