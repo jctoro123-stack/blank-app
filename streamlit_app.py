@@ -134,13 +134,15 @@ with right_col:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.subheader("📊 Resultado clínico")
 
-   if predecir:
-       imc = peso / ((altura / 100) ** 2)
-       categorias = ["Bajo peso", "Normal", "Sobrepeso", "Obesidad"]
-       imc_categoria = 1 if imc < 18.5 else 2 if imc < 25 else 3 if imc < 30 else 4
-       texto_imc = categorias[imc_categoria - 1]
-       
-       datos = pd.DataFrame({
+if predecir:
+    imc = peso / ((altura / 100) ** 2)
+
+    categorias = ["Bajo peso", "Normal", "Sobrepeso", "Obesidad"]
+
+    imc_categoria = 1 if imc < 18.5 else 2 if imc < 25 else 3 if imc < 30 else 4
+    texto_imc = categorias[imc_categoria - 1]
+
+    datos = pd.DataFrame({
         "age": [edad],
         "gender": [genero],
         "height": [altura],
