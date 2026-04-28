@@ -191,14 +191,15 @@ if predecir:
     st.progress(int(riesgo))
 
     st.markdown("### 🩺 Recomendaciones")
+    
 if riesgo >= 70:
         st.error("Requiere evaluación médica prioritaria.")
-elif riesgo >= 40:
-    st.warning("Se recomienda seguimiento preventivo.")
-else:
-    st.success("Mantener hábitos saludables.")
+    elif riesgo >= 40:
+        st.warning("Se recomienda seguimiento preventivo.")
+    else:
+        st.success("Mantener hábitos saludables.")
 else:
     st.info("Complete el formulario para visualizar el análisis.")
-    
-    st.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
