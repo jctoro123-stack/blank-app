@@ -140,15 +140,15 @@ with right_col:
     imc_categoria = 4
     texto_imc = "Obesidad"
 
-    if imc < 18.5:
-        imc_categoria = 1
-        texto_imc = "Bajo peso"
-    elif imc < 25:
-        imc_categoria = 2
-        texto_imc = "Normal"
-    elif imc < 30:
-        imc_categoria = 3
-        texto_imc = "Sobrepeso"
+        if imc < 18.5:
+            imc_categoria = 1
+            texto_imc = "Bajo peso"
+        elif imc < 25:
+            imc_categoria = 2
+            texto_imc = "Normal"
+        elif imc < 30:
+            imc_categoria = 3
+            texto_imc = "Sobrepeso"
 
     datos = pd.DataFrame({
         "age": [edad],
