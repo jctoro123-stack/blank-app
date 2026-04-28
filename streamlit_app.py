@@ -162,43 +162,43 @@ if predecir:
     prob = modelo.predict_proba(datos_scaled)[0][1]
     riesgo = prob * 100
        
-        datos_scaled = scaler.transform(datos)
-        prob = modelo.predict_proba(datos_scaled)[0][1]
-        riesgo = prob * 100
+    datos_scaled = scaler.transform(datos)
+    prob = modelo.predict_proba(datos_scaled)[0][1]
+    riesgo = prob * 100
 
-        if riesgo >= 70:
-            color = "#dc2626"
-            estado = "🔴 ALTO RIESGO"
-        elif riesgo >= 40:
-            color = "#eab308"
-            estado = "🟡 RIESGO MODERADO"
-        else:
-            color = "#16a34a"
-            estado = "🟢 BAJO RIESGO"
-
-        st.markdown(
-            f"<div class='result-card' style='background:{color};'>{estado}</div>",
-            unsafe_allow_html=True
-        )
-
-        m1, m2 = st.columns(2)
-        with m1:
-            st.metric("Probabilidad", f"{riesgo:.1f}%")
-        with m2:
-            st.metric("IMC", f"{imc:.1f}")
-            st.write(f"**Clasificación IMC:** {texto_imc}")
-            
-        st.progress(int(riesgo))
-
-        st.markdown("### 🩺 Recomendaciones")
-        if riesgo >= 70:
-            st.error("Requiere evaluación médica prioritaria.")
-        elif riesgo >= 40:
-            st.warning("Se recomienda seguimiento preventivo.")
-        else:
-            st.success("Mantener hábitos saludables.")
+    if riesgo >= 70:
+        color = "#dc2626"
+        estado = "🔴 ALTO RIESGO"
+    elif riesgo >= 40:
+        color = "#eab308"
+        estado = "🟡 RIESGO MODERADO"
     else:
-        st.info("Complete el formulario para visualizar el análisis.")
+        color = "#16a34a"
+        estado = "🟢 BAJO RIESGO"
+
+    st.markdown(
+        f"<div class='result-card' style='background:{color};'>{estado}</div>",
+        unsafe_allow_html=True
+    )
+
+    m1, m2 = st.columns(2)
+    with m1:
+        st.metric("Probabilidad", f"{riesgo:.1f}%")
+    with m2:
+        st.metric("IMC", f"{imc:.1f}")
+        st.write(f"**Clasificación IMC:** {texto_imc}")
+            
+    st.progress(int(riesgo))
+
+    st.markdown("### 🩺 Recomendaciones")
+if riesgo >= 70:
+        st.error("Requiere evaluación médica prioritaria.")
+    elif riesgo >= 40:
+        st.warning("Se recomienda seguimiento preventivo.")
+    else:
+        st.success("Mantener hábitos saludables.")
+else:
+    st.info("Complete el formulario para visualizar el análisis.")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
