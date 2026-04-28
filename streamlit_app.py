@@ -195,7 +195,8 @@ if riesgo >= 70:
     st.write("• Solicitar perfil lipídico y glucosa")
     st.write("• Seguimiento en 30 días")
 
-elif riesgo >= 40:
+with right_col:
+    elif riesgo >= 40:
     st.warning("Riesgo moderado, se recomienda seguimiento preventivo.")
     st.write("• Control médico periódico")
     st.write("• Mejorar hábitos alimenticios")
