@@ -162,7 +162,7 @@ with right_col:
             "smoke": [fuma],
             "alco": [alcohol],
             "active": [actividad],
-            "imc": [imc]
+            "imc": [imc],
             "imc_categoria": [imc_categoria]
         })
 
