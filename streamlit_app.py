@@ -193,13 +193,23 @@ if predecir:
     st.markdown("### 🩺 Recomendaciones")
     
 if riesgo >= 70:
-        st.error("Requiere evaluación médica prioritaria.")
-    elif riesgo >= 40:
-        st.warning("Se recomienda seguimiento preventivo.")
-    else:
-        st.success("Mantener hábitos saludables.")
+    st.error("Paciente con alta probabilidad de enfermedad cardiovascular.")
+    st.write("• Remisión inmediata a medicina interna")
+    st.write("• Control prioritario de presión arterial")
+    st.write("• Solicitar perfil lipídico y glucosa")
+    st.write("• Seguimiento en 30 días")
+
+elif riesgo >= 40:
+    st.warning("Riesgo moderado, se recomienda seguimiento preventivo.")
+    st.write("• Control médico periódico")
+    st.write("• Mejorar hábitos alimenticios")
+    st.write("• Incrementar actividad física")
+    st.write("• Reevaluación en 60 días")
+
 else:
-    st.info("Complete el formulario para visualizar el análisis.")
+    st.success("Riesgo bajo.")
+    st.write("• Mantener hábitos saludables")
+    st.write("• Seguimiento preventivo anual")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
