@@ -187,26 +187,24 @@ if predecir:
     st.progress(int(riesgo))
 
     st.markdown("### 🩺 Recomendaciones")
-    
-if riesgo >= 70:
-    st.error("Paciente con alta probabilidad de enfermedad cardiovascular.")
-    st.write("• Remisión inmediata a medicina interna")
-    st.write("• Control prioritario de presión arterial")
-    st.write("• Solicitar perfil lipídico y glucosa")
-    st.write("• Seguimiento en 30 días")
-
 with right_col:
-    elif riesgo >= 40:
-    st.warning("Riesgo moderado, se recomienda seguimiento preventivo.")
-    st.write("• Control médico periódico")
-    st.write("• Mejorar hábitos alimenticios")
-    st.write("• Incrementar actividad física")
-    st.write("• Reevaluación en 60 días")
+            if riesgo >= 70:
+            st.error("Paciente con alta probabilidad de enfermedad cardiovascular.")
+            st.write("• Remisión inmediata a medicina interna")
+            st.write("• Control prioritario de presión arterial")
+            st.write("• Solicitar perfil lipídico y glucosa")
+            st.write("• Seguimiento en 30 días")
 
-else:
-    st.success("Riesgo bajo.")
-    st.write("• Mantener hábitos saludables")
-    st.write("• Seguimiento preventivo anual")
+        elif riesgo >= 40:
+            st.warning("Riesgo moderado, se recomienda seguimiento preventivo.")
+            st.write("• Control médico periódico")
+            st.write("• Mejorar hábitos alimenticios")
+            st.write("• Incrementar actividad física")
+            st.write("• Reevaluación en 60 días")
 
-st.markdown("</div>", unsafe_allow_html=True)
+        else:
+            st.success("Riesgo bajo.")
+            st.write("• Mantener hábitos saludables")
+            st.write("• Seguimiento preventivo anual")
+        st.markdown("</div>", unsafe_allow_html=True)
 
