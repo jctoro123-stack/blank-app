@@ -166,6 +166,7 @@ with right_col:
             "imc_categoria": [imc_categoria]
         })
 
+        st.write("Columnas esperadas:", scaler.feature_names_in_)
         datos_scaled = scaler.transform(datos)
         prob = modelo.predict_proba(datos_scaled)[0][1]
         riesgo = prob * 100
