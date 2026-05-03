@@ -159,8 +159,7 @@ with right:
     if predecir:
 
         # ----------- VARIABLES -----------
-        imc = peso / ((altura / 100) ** 2)
-        imc_cat, texto_imc = clasificar_peso(genero, altura, peso)
+        imc_cat, texto_imc, imc = clasificar_peso(genero, altura, peso)
 
         presion_pulso = ap_hi - ap_lo
         ratio_presion = ap_hi / ap_lo if ap_lo != 0 else 0
